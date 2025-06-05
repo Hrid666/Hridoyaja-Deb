@@ -369,8 +369,9 @@
     }
 
     .project-description a:hover {
-  opacity: 0.8;              /* subtle effect on hover */
-}
+      opacity: 0.8;
+      /* subtle effect on hover */
+    }
 
 
 
@@ -417,6 +418,74 @@
       border-radius: 5px;
       cursor: pointer;
     }
+
+    /* Contact section styling */
+    .section.contact {
+      text-align: center;
+      padding: 50px 20px;
+      color: white;
+    }
+
+    /* Heading styles */
+    .section.contact h2 {
+      font-size: 2rem;
+      color: #c084fc;
+      margin-bottom: 10px;
+    }
+
+    .section.contact h3 {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      font-weight: 500;
+    }
+
+    /* Form styling */
+    form[name="contact"] {
+      max-width: 500px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    /* Input and label styling */
+    form[name="contact"] label {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      font-weight: 500;
+      gap: 5px;
+    }
+
+    form[name="contact"] input,
+    form[name="contact"] textarea {
+      padding: 10px;
+      background-color: #1e1e1e;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      resize: vertical;
+    }
+
+    /* Button styling */
+    form[name="contact"] button {
+      width: fit-content;
+      align-self: center;
+      padding: 10px 20px;
+      background-color: #c084fc;
+      color: black;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    form[name="contact"] button:hover {
+      background-color: #a855f7;
+    }
+
 
     .cv-download {
       text-align: center;
@@ -639,12 +708,22 @@
   <!-- Contact Section -->
   <section class="section contact" id="contact">
     <h2>Contact Me</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
+    <h3>Have any ideas in mind or just want to get in touch?</h3>
+    <form name="contact" method="POST" data-netlify="true">
+      <p>
+        <label>Your Name: <input type="text" name="name" required></label>
+      </p>
+      <p>
+        <label>Your Email: <input type="email" name="email" required></label>
+      </p>
+      <p>
+        <label>Message: <textarea name="message" required></textarea></label>
+      </p>
+      <p>
+        <button type="submit">Send</button>
+      </p>
     </form>
+
   </section>
 
   <!-- Footer -->
