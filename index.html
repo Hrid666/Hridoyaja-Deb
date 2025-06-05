@@ -355,6 +355,25 @@
       font-weight: bold;
     }
 
+    /* Remove underlines from all links inside project descriptions */
+    .project-description a {
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+      /* Optional: matches surrounding text color */
+    }
+
+    /* OR if it's not a link and just text */
+    .project-description {
+      text-decoration: none;
+    }
+
+    .project-description a:hover {
+  opacity: 0.8;              /* subtle effect on hover */
+}
+
+
+
     @media (max-width: 768px) {
       .project-section {
         align-items: center;
@@ -618,7 +637,6 @@
   </section>
 
   <!-- Contact Section -->
-  <!-- Contact Section -->
   <section class="section contact" id="contact">
     <h2>Contact Me</h2>
     <form>
@@ -628,6 +646,7 @@
       <button type="submit">Send Message</button>
     </form>
   </section>
+
   <!-- Footer -->
   <section class="footer">
     <p><i>📧</i> dhridoyaja@gmail.com</p>
